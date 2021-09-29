@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Юлия](https://up.htmlacademy.ru/htmlcss/32/user/1660443).
-* Наставник: `Дмитрий Железцов`.
+* Наставник: [Дмитрий Железцов](https://htmlacademy.ru/profile/sench).
 
 ---
 

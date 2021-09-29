@@ -6,17 +6,17 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+
+    <!--Header-->
     <header class="page-header">
       <h1 class="visually-hidden">Интернет-магазин гаджетов "Device"</h1>
       <img class="logo" src="" alt="Логотип интернет-магазина «Device»">
       <nav class="main-navigation">
+        <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+        </form>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input type="text" name="search" id="search" placeholder="Поиск по сайту">
-            </form>
-          </li>
           <li class="navigation-item">
             <a class="navigation-link enter" href="#">Войти</a>
           </li>
@@ -44,7 +44,11 @@
         </ul>
       </nav>
     </header>
+
+    <!--Main-->
     <main class="main-index">
+
+      <!--Slider-->
       <section class="slider">
         <h2 class="visually-hidden">Лучшие товары</h2>
         <h3 class="visually-hidden">Лазерный квадрокоптер</h3>
@@ -88,6 +92,8 @@
           </li>
         </ol>
       </section>
+
+      <!--Products-->
       <section class="products">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="products-list">
@@ -129,16 +135,18 @@
           </li>
         </ul>
       </section>
+
+      <!--Advantages-->
       <section class="advantages">
         <h2 class=" section-title advantages-title">Доставка</h2>
-        <ul class="agvantages-list">
+        <ul class="advantages-list">
           <li class="btn advantages-item">Доставка
             <section class="advantages-details">
               <h3 class="advantages-subtitle">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </section>
           </li>
-          <li class="btn agvantages-item">Гарантия
+          <li class="btn advantages-item">Гарантия
             <section class="advantages-details">
               <h3 class="advantages-subtitle">Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
@@ -156,6 +164,8 @@
           <span class="visually-hidden">Посмотреть дополнительную информацию</span>
         </button>
       </section>
+
+      <!--About us-->
       <section class="about-us">
         <h2 class=" section-title about-us-title">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -182,6 +192,8 @@
         </ul>
         <a class="btn email-link" href="#">Напишите нам</a>
       </section>
+
+      <!--Subscribe-->
       <section class="subscribe">
         <h2 class="section-title subscribe-title">Подпишитесь на рассылку</h2>
         <p>Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
@@ -193,14 +205,20 @@
         <span>Это бесплатно</span>
       </section>
     </main>
+
+    <!--Footer-->
     <footer class="page-footer">
       <img class="footer-logo" src="" alt="Логотип интернет-магазина «Device»">
+
+      <!--Footer-adress-->
       <section class="footer-address">
         <h2 class="visually-hidden">Адрес интернет-магазина «Device»</h2>
         <address>
           <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
       </section>
+
+      <!--footer-navigation-->
       <section class="footer-navigation">
         <h2 class="visually-hidden">Элементы навигации по сайту</h2>
         <ul class="footer-navigation-list">
@@ -215,10 +233,14 @@
           </li>
         </ul>
       </section>
+
+      <!--footer-phone-->
       <section class="footer-phone">
         <h2 class="visually-hidden">Наш телефон</h2>
         <a class="footer-contacts-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
       </section>
+
+      <!--footer-social-->
       <section class="footer-social">
         <h2 class="visually-hidden">Наши аккаунты в социальных сетях</h2>
         <ul class="footer-social-list">

@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 
     <!--Header-->
     <header class="page-header">
       <h1 class="visually-hidden">Интернет-магазин гаджетов "Device"</h1>
-      <img class="logo" src="" alt="Логотип интернет-магазина «Device»">
+      <img class="logo" src="images/logo/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
       <nav class="main-navigation">
         <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
@@ -28,7 +29,7 @@
             <a class="navigation-link cart" href="#">Корзина</a>
           </li>
         </ul>
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-services">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Каталог товаров</a>
           </li>
@@ -51,86 +52,166 @@
       <!--Slider-->
       <section class="slider">
         <h2 class="visually-hidden">Лучшие товары</h2>
-          <article class="quadrocopter">
+
+      <!--Quadrocopter-->
+          <article class="slider-catalog">
             <h3 class="visually-hidden">Лазерный квадрокоптер</h3>
-            <img class="slider-image" src="" alt="Лазерный квадракоптер">
+            <img class="slider-image" src="images/slider/quadrocopter-slider.png" width="560" height="560" alt="Лазерный квадракоптер">
             <b>Порхает как бабочка, жалит как пчела!</b>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="btn product-details" href="#">Подробнее</a>
+            <a class="btn slider-btn" href="#">Подробнее</a>
             <table class="features">
               <tr>
-                <td>800 м.</td>
-                <td>50 м.</td>
+                <td class="features-value">800 м.</td>
+                <td class="features-value">50 м.</td>
               </tr>
               <tr>
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
+                <td class="features-description">Дальность полета</td>
+                <td class="features-description">Радиус поражения</td>
               </tr>
             </table>
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">Фото 1</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Фото 2</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Фото 3</span>
+                </button>
+              </li>
+            </ol>
           </article>
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">Фото 1</span>
+
+          <!--Fitness-tracker-->
+          <article class="slider-catalog">
+            <h3 class="visually-hidden">Фитнес-браслет</h3>
+            <img class="slider-image" src="images/slider/fitness-tracker-slider.png" width="560" height="560" alt="Фитнес-браслет">
+            <b>Худеем правильно!</b>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="btn slider-btn" href="#">Подробнее</a>
+            <table class="features">
+              <tr>
+                <td class="features-value">48 часов</td>
+              </tr>
+              <tr>
+                <td class="features-description">Без подзарядки</td>
+              </tr>
+            </table>
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
             </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Фото 2</span>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
             </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Фото 3</span>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button " type="button">
+                  <span class="visually-hidden">Фото 1</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">Фото 2</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Фото 3</span>
+                </button>
+              </li>
+            </ol>
+          </article>
+
+          <!--Selfie-stick-->
+          <article class="slider-catalog">
+            <h3 class="visually-hidden">Cелфи-палка</h3>
+            <img class="slider-image" src="images/slider/selfie-stick-slider.png" width="560" height="560" alt="Cамая длинная селфи-палка">
+            <b>Делай селфи, как Бен Стиллер!</b>
+            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <a class="btn slider-btn" href="#">Подробнее</a>
+            <table class="features">
+              <tr>
+                <td class="features-value">8.5 м.</td>
+                <td class="features-value">5 кг.</td>
+                <td class="features-value">Карбон</td>
+              </tr>
+              <tr>
+                <td class="features-description">Длина палки</td>
+                <td class="features-description">Вес палки</td>
+                <td class="features-description">Материал</td>
+              </tr>
+            </table>
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
             </button>
-          </li>
-        </ol>
-      </section>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">Фото 1</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Фото 2</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">Фото 3</span>
+                </button>
+              </li>
+            </ol>
+          </article>
+        </section>
 
       <!--Products-->
       <section class="products">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="products-list">
           <li class="products-item">
-            <a class="products-link" href="#">
-              <img class="products-picture" src="" alt="Товары из раздела «Виртуальная реальность»">
-              <b>Виртуальная реальность</b>
+            <a class="products-link virtual-realty" href="#">
+              <h3 class="products-title">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="products-item">
-            <a class="products-link" href="catalog.html" target="_blank">
-              <img class="products-picture" src="" alt="Товары из раздела «Моноподы для селфи»">
-              <b>Моноподы для селфи</b>
+            <a class="products-link monopod" href="catalog.html" target="_blank">
+              <h3 class="products-title">Моноподы для селфи</h3>
             </a>
           </li>
           <li class="products-item">
-            <a class="products-link" href="#">
-              <img class="products-picture" src="" alt="Товары из раздела «Экшн-камеры»">
-              <b>Экшн-камеры</b>
+            <a class="products-link action-camera" href="#">
+              <h3 class="products-title">Экшн-камеры</h3>
             </a>
           </li>
           <li class="products-item">
-            <a class="products-link" href="#">
-              <img class="products-picture" src="" alt="Товары из раздела «Фитнес-браслеты»">
-              <b>Фитнес-браслеты</b>
+            <a class="products-link fitness-tracker" href="#">
+              <h3 class="products-title">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="products-item">
-            <a class="products-link" href="#">
-              <img class="products-picture" src="" alt="Товары из раздела «Умные часы»">
-              <b>Умные часы</b>
+            <a class="products-link smart-watches" href="#">
+              <h3 class="products-title">Умные часы</h3>
             </a>
           </li>
           <li class="products-item">
-            <a class="products-link" href="#">
-              <img class="products-picture" src="" alt="Товары из раздела «Квадрокоптеры»">
-              <b>Квадрокоптеры</b>
+            <a class="products-link quadrocopter" href="#">
+              <h3 class="products-picture">Квадрокоптеры</h3>
             </a>
           </li>
         </ul>
@@ -138,23 +219,26 @@
 
       <!--Advantages-->
       <section class="advantages">
-        <h2 class=" section-title advantages-title">Доставка</h2>
+        <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="advantages-list">
-          <li class="btn advantages-item">Доставка
+          <li class="advantages-item">
+            <b class="btn advantages-current-btn">Доставка</b>
             <section class="advantages-details">
-              <h3 class="advantages-subtitle">Доставка</h3>
+              <h3 class="advantages-subtitle delivery">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </section>
           </li>
-          <li class="btn advantages-item">Гарантия
+          <li class="advantages-item">
+            <b class="btn">Гарантия</b>
             <section class="advantages-details">
-              <h3 class="advantages-subtitle">Гарантия</h3>
+              <h3 class="advantages-subtitle warranty">Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </section>
           </li>
-          <li class="btn advantages-item">Кредит
+          <li class="advantages-item">
+            <b class="btn">Кредит</b>
             <section class="advantages-details">
-              <h3 class="advantages-subtitle">Кредит</h3>
+              <h3 class="advantages-subtitle credit">Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </section>
           </li>
@@ -200,7 +284,7 @@
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label  class="visually-hidden" for="email">Введите свой email</label>
           <input type="text" name="email" id="email" placeholder="Ваш e-mail">
-          <button class="subscribe" type="submit">Подписаться</button>
+          <button class=" btn subscribe" type="submit">Подписаться</button>
         </form>
         <span>Это бесплатно</span>
       </section>
@@ -208,7 +292,7 @@
 
     <!--Footer-->
     <footer class="page-footer">
-      <img class="footer-logo" src="" alt="Логотип интернет-магазина «Device»">
+      <img class="footer-logo" src="images/logo/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
 
       <!--Footer-adress-->
       <section class="footer-address">
@@ -245,17 +329,17 @@
         <h2 class="visually-hidden">Наши аккаунты в социальных сетях</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-social-link" href="#">
+            <a class="footer-social-link facebook" href="#">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-link" href="#">
+            <a class="footer-social-link instagram" href="#">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-link" href="#">
+            <a class="footer-social-link twitter" href="#">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>

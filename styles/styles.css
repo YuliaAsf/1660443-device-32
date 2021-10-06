@@ -64,6 +64,12 @@ body {
   text-transform: uppercase;
 }
 
+::placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .slider-catalog {
   background-image: linear-gradient(#ffe17f 20%,#ffffff 20%);
 }
@@ -219,7 +225,8 @@ body {
   font-weight: 700;
 }
 
-.contacts-phone {
+.contacts-phone,
+.contacts-address {
   font-style: normal;
   color: #444444;
 }
@@ -229,9 +236,10 @@ body {
   background-color: #444444;
 }
 
-.footer-address {
+.footer-contacts-address {
   font-size: 16px;
   line-height: 19px;
+  font-style: normal;
 }
 
 .footer-navigation-link {
@@ -282,6 +290,113 @@ body {
   background-size: contain;
   content: "";
   }
+
+  /*Разметка каталога*/
+
+  .exit {
+  color: rgba(0, 0, 0, 0.3)
+  }
+
+  .main-inner {
+  color: #000000;
+  background-color: #ffffff;
+  }
+
+  .inner-header-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  }
+
+  .breadcrumbs {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.6);
+  }
+
+  .breadcrumbs-link {
+  text-decoration: none;
+  color:inherit;
+  }
+
+  .catalog-products-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: #dcdcdc;
+  }
+
+.catalog-filter-form {
+  background-color: #ebebeb;
+  }
+
+.catalog-filter-title {
+  line-height: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.catalog-filter-label {
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+  }
+
+.filter-control-label {
+  font-size: 16px;
+  line-height: 19px;
+}
+.sorting-container {
+  background-color: #ebebeb;
+}
+.sorting-type-control {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.products-card-link {
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color:inherit;
+}
+
+.products-card-price {
+  line-height: 21px;
+  text-align: right;
+  color: #444444;
+}
+
+.pagination-show-more,
+.pagination-control {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration:none;
+  text-align: center;
+  color:inherit;
+}
+
+.pagination-number {
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  text-align:center;
+  color: rgba(68, 68, 68, 0.3);
+}
 
 
 

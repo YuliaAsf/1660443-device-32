@@ -58,7 +58,7 @@ body {
   background-color: #ffe17f;
 }
 
-.navigation-list {
+.reset-list {
   margin: 0;
   padding: 0;
   list-style:none;
@@ -172,8 +172,6 @@ body {
 .products-list {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
 }
 
 .products-item {
@@ -342,12 +340,6 @@ body {
   margin-right: auto;
 }
 
-.footer-navigation-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 .footer-navigation-link {
   text-decoration: none;
   color: inherit;
@@ -371,10 +363,7 @@ body {
 
 .footer-social-list {
   width: 159px;
-  padding: 0;
-  margin: 0;
   margin-right: 349px;
-  list-style: none;
 }
 
 .footer-social-link::after {

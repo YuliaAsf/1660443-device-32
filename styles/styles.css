@@ -121,7 +121,6 @@ body {
 .navigation-user,
 .navigation-services {
   display: flex;
-  /*justify-content: space-between;*/
   flex-wrap: wrap;
 }
 
@@ -165,6 +164,10 @@ body {
   padding: 10px 20px 9px 46px;
   padding-right: 20px;
   padding-top: 9px;
+}
+
+.compare {
+  padding-right: 17px;
 }
 
 .compare a {
@@ -218,7 +221,6 @@ body {
 .slider {
   display: grid;
   grid-template-columns: 1160px;
-  /*overflow: hidden;*/
   margin-bottom: 71px;
 }
 
@@ -474,17 +476,20 @@ body {
 .advantages-details-credit {
   padding-right: 280px;
 }
+
 /*Special-delivery*/
 
 .special-delivery {
+  position: relative;
   margin-bottom: 97px;
   color: #000000;
   background-color: #f0f0f0;
 }
 
 .special-delivery-link {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  padding: 40px 0px;
+  padding-top: 37px;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
@@ -492,10 +497,18 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: #000000;
 }
 
+.special-delivery-information {
+  padding-left: 5px;
+}
+
 .special-delivery-link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 125px;
   height: 100px;
@@ -508,6 +521,9 @@ body {
 }
 
 .special-delivery-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: block;
   width: 100px;
   height: 100px;
@@ -518,14 +534,6 @@ body {
   content: "";
 }
 
-.special-delivery-information {
-  box-sizing: border-box;
-  width: 935px;
-  padding-top: 38px;
-  padding-right: 21px;
-  text-align: center;
-  /*padding-left: 196px;*/
-}
 
 /*About us*/
 
@@ -599,7 +607,8 @@ body {
 
 .subscribe {
   padding-top: 75px;
-  padding-bottom: 131px;
+  padding-bottom: 130px;
+
   color: #444444;
   background-color: #f0f0f0;
 }
@@ -658,10 +667,10 @@ body {
 }
 
 .subscribe-notice {
-width: 290px;
-padding-top: 13px;
-text-align: right;
-padding-right: 1px;
+  width: 270px;
+  padding: 13px 25px;
+  padding-right: 2px;
+  text-align: right;
 }
 
 /*Footer*/
@@ -837,8 +846,8 @@ padding: 9px 10px;
   margin-right: auto;
 }
 
-.navigation-catalog {
-  padding-bottom: 18.5px;
+.navigation-catalog-page {
+  padding-bottom: 37px;
 }
 
 /*Catalog inner-header*/

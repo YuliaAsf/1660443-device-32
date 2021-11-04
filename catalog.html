@@ -11,39 +11,43 @@
     <!--Header-->
     <header class="page-header page-container">
       <h1 class="visually-hidden">Интернет-магазин гаджетов "Device"</h1>
-      <img class="logo" src="images/logo/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
+      <a class="logo-link" href="index.html">
+        <img class="logo" src="images/logo/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
+      </a>
       <nav class="navigation navigation-catalog-page">
         <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
           <input type="search" name="search" id="search" placeholder="Поиск по сайту">
         </form>
-        <ul class="navigation-list navigation-user reset-list">
-          <li class="navigation-item user-name">
-            <a class="navigation-link" href="#">Коля Петухов</a>
+        <ul class="navigation-user-list reset-list">
+          <li class="navigation-user-item navigation-user-name">
+            <a class="navigation-user-link" href="#">Коля Петухов</a>
           </li>
-          <li class="navigation-item logout">
-            <a class="navigation-link" href="#">Выйти</a>
+          <li class="navigation-user-item navigation-logout">
+            <a class="navigation-user-link" href="#">Выйти</a>
           </li>
-          <li class="navigation-item compare compare-catalog">
-              <a class="navigation-link" href="#">Сравнить</a>
+          <li class="navigation-user-item navigation-compare navigation-compare-catalog">
+              <a class="navigation-user-link" href="#">Сравнить</a>
           </li>
-          <li class="navigation-item cart">
-            <span class="visually-hidden">Количество товаров в корзине</span>
-            <a class="navigation-link" href="#">Корзина</a>
+          <li class="navigation-user-item navigation-cart">
+            <a class="navigation-user-link" href="#">Корзина
+              <span class="visually-hidden">Количество товаров в корзине</span>
+              <span class="cart-amount">2</span>
+            </a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-services reset-list">
+        <ul class="navigation-services-list reset-list">
           <li class="navigation-item navigation-catalog">
-            <a class="navigation-link" href="#">Каталог товаров</a>
+            <a class="navigation-catalog-link" href="#">Каталог товаров</a>
           </li>
           <li class="navigation-item navigation-delivery">
-            <a class="navigation-link" href="#">Доставка</a>
+            <a class="navigation-services-link" href="#">Доставка</a>
           </li>
           <li class="navigation-item navigation-warranty">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="navigation-services-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-item navigation-contacts">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="navigation-services-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -161,54 +165,84 @@
           <div class="button-container">
             <button class="sorting-button" type="button">
               <span class="visually-hidden">Cортировать по возрастанию</span>
+              <svg class="sorting-up-icon" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L11 10H0"/>
+              </svg>
             </button>
-            <button class="sorting-button" type="button">
-                  <span class="visually-hidden">Сортировать по убыванию</span>
+            <button class="sorting-button sorting-current" type="button">
+              <span class="visually-hidden">Сортировать по убыванию</span>
+              <svg class="sorting-down-icon" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11"/>
+              </svg>
             </button>
           </div>
         </div>
-        <div class="products-card-container">
-          <ul class="products-card-list reset-list">
-            <li class="products-card-item">
-              <a class="products-card-image-link" href="#">
-                <img class="products-card-image"  src="images/catalog/amateur-selfie-stick.png" width="360" height="380" alt="Любительская селфи-палка">
-              </a>
-              <a class="products-card-title-link">
-                <h3 class="products-card-title">Любительская <span class="nowrap">селфи-палка</span></h3>
-              </a>
-              <span class="products-card-price">500 ₽</span>
+        <div class="catalog-card-container">
+          <ul class="catalog-card-list reset-list">
+            <li class="catalog-card-item">
+              <div class="catalog-image-container">
+                <img class="catalog-card-image"  src="images/catalog/amateur-selfie-stick.png" width="360" height="380" alt="Любительская селфи-палка">
+                <span class="new-product visually-hidden">New</span>
+                <div class="catalog-hover-container">
+                  <a class="btn-dark hover-link">Подробнее</a>
+                </div>
+              </div>
+              <div class="catalog-information-container">
+                <a class="catalog-card-title-link" href="#">
+                  <h3 class="catalog-card-title">Любительская <span class="nowrap">селфи-палка</span></h3>
+                </a>
+                <span class="catalog-card-price">500 ₽</span>
+              </div>
             </li>
-            <li class="products-card-item">
-              <a class="products-card-image-link" href="#">
-                <img class="products-card-image" src="images/catalog/professional-selfie-stick.png" width="360" height="380" alt="Профессиональная селфи-палка">
-              </a>
-              <a class="products-card-title-link">
-                <h3 class="products-card-title">Профессиональная <span class="nowrap">селфи-палка</span></h3>
-              </a>
-              <span class="products-card-price">1&nbsp;500 ₽</span>
+            <li class="catalog-card-item">
+              <div class="catalog-image-container">
+                <img class="catalog-card-image" src="images/catalog/professional-selfie-stick.png" width="360" height="380" alt="Профессиональная селфи-палка">
+                <span class="new-product visually-hidden">New</span>
+                <div class="catalog-hover-container">
+                  <a class="btn-dark hover-link">Подробнее</a>
+                </div>
+              </div>
+              <div class="catalog-information-container">
+                <a class="catalog-card-title-link" href="#">
+                  <h3 class="catalog-card-title">Профессиональная <span class="nowrap">селфи-палка</span></h3>
+                </a>
+                <span class="catalog-card-price">1&nbsp;500 ₽</span>
+              </div>
             </li>
-            <li class="products-card-item">
-              <a class="products-card-image-link" href="#">
-                <img class="products-card-image" src="images/catalog/waterproof-selfie-stick.png" width="360" height="380" alt="Непотопляемая селфи-палка">
-              </a>
-              <a class="products-card-title-link">
-                <h3 class="products-card-title">Непотопляемая <span class="nowrap">селфи-палка</span></h3>
-              </a>
-              <span class="products-card-price">2&nbsp;500 ₽</span>
+            <li class="catalog-card-item">
+              <div class="catalog-image-container">
+                <img class="catalog-card-image" src="images/catalog/waterproof-selfie-stick.png" width="360" height="380" alt="Непотопляемая селфи-палка">
+                <span class="new-product visually-hidden">New</span>
+                <div class="catalog-hover-container">
+                  <a class="btn-dark hover-link">Подробнее</a>
+                </div>
+              </div>
+              <div class="catalog-information-container">
+                <a class="catalog-card-title-link" href="#">
+                  <h3 class="catalog-card-title">Непотопляемая <span class="nowrap">селфи-палка</span></h3>
+                </a>
+                <span class="catalog-card-price">2&nbsp;500 ₽</span>
+              </div>
             </li>
-            <li class="products-card-item">
-              <a class="products-card-image-link" href="#">
-                <img class="products-card-image" src="images/catalog/follow-me-selfie.png" width="360" height="380" alt="Cелфи-палка «Следуй за мной»">
-              </a>
-              <a class="products-card-title-link">
-                <h3 class="products-card-title">Селфи-палка «Следуй за мной»</h3>
-              </a>
-              <span class="products-card-price">4&nbsp;900 ₽</span>
+            <li class="catalog-card-item">
+              <div class="catalog-image-container">
+                <img class="catalog-card-image" src="images/catalog/follow-me-selfie.png" width="360" height="380" alt="Cелфи-палка «Следуй за мной»">
+                <span class="new-product">New</span>
+                <div class="catalog-hover-container">
+                  <a class="btn-dark hover-link" href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="catalog-information-container">
+                <a class="catalog-card-title-link" href="#">
+                  <h3 class="catalog-card-title">Селфи-палка «Следуй за мной»</h3>
+                </a>
+                <span class="catalog-card-price">4&nbsp;900 ₽</span>
+              </div>
             </li>
           </ul>
-          <button class="pagination-show-more" type="button">Загрузить ещё</button>
+          <button class="catalog-show-more" type="button">Загрузить ещё</button>
           <ul class="pagination-list reset-list">
-            <li class="pagination-item pagination-control-back">
+            <li class="pagination-item pagination-controls pagination-control-back">
               <a class="pagination-link" href="#">Назад</a>
             </li>
             <li class="pagination-item pagination-number">
@@ -226,76 +260,112 @@
             <li class="pagination-item pagination-number ">
               <a class="pagination-link" href="#">15</a>
             </li>
-            <li class="pagination-item pagination-control-forward">
-              <a class="pagination-link" href="#">Вперед</a>
+            <li class="pagination-item pagination-controls pagination-control-forward">
+              <a class="pagination-link" href="#">Вперёд</a>
             </li>
           </ul>
         </div>
       </section>
     </main>
 
-    <!--Footer-->
-    <footer class="page-footer">
-      <div class="page-footer-container">
-        <img class="footer-logo" src="images/logo/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
+        <!--Footer-->
+        <footer class="page-footer">
+          <div class="page-footer-container">
+            <img class="footer-logo" src="images/logo/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
 
-        <!--Footer-adress-->
-        <section class="footer-address">
-          <h2 class="visually-hidden">Адрес интернет-магазина «Device»</h2>
-          <address>
-            <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.
-            </p>
-          </address>
-        </section>
+            <!--Footer-adress-->
+            <section class="footer-address">
+              <h2 class="visually-hidden">Адрес интернет-магазина «Device»</h2>
+              <address>
+                <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.
+                </p>
+              </address>
+            </section>
 
-        <!--footer-navigation-->
-        <section class="footer-navigation">
-          <h2 class="visually-hidden">Элементы навигации по сайту</h2>
-          <ul class="footer-navigation-list reset-list">
-            <li class="footer-navigation-item">
-              <a class="footer-navigation-link" href="#">Доставка</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-navigation-link" href="#">Гарантия</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-navigation-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </section>
+            <!--footer-navigation-->
+            <section class="footer-navigation">
+              <h2 class="visually-hidden">Элементы навигации по сайту</h2>
+              <ul class="footer-navigation-list reset-list">
+                <li class="footer-navigation-item">
+                  <a class="footer-navigation-link" href="#">Доставка</a>
+                </li>
+                <li class="footer-navigation-item">
+                  <a class="footer-navigation-link" href="#">Гарантия</a>
+                </li>
+                <li class="footer-navigation-item">
+                  <a class="footer-navigation-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </section>
 
-          <!--footer-phone-->
-        <section class="footer-phone">
-          <h2 class="visually-hidden">Наш телефон</h2>
-          <a class="footer-phone-link" href="tel:78128121212">Тел.: +7 (812) 812-12-12</a>
-        </section>
+              <!--footer-phone-->
+            <section class="footer-phone">
+              <h2 class="visually-hidden">Наш телефон</h2>
+              <a class="footer-phone-link" href="tel:78128121212">Тел.: +7 (812) 812-12-12</a>
+            </section>
 
-          <!--footer-social-->
-        <section class="footer-social">
-          <h2 class="visually-hidden">Наши аккаунты в социальных сетях</h2>
-          <ul class="footer-social-list reset-list">
-            <li class="footer-social-item">
-              <a class="footer-social-link facebook" href="#">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link instagram" href="#">
-                <span class="visually-hidden">Instagram</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link twitter" href="#">
-                <span class="visually-hidden">Twitter</span>
-              </a>
-            </li>
-          </ul>
-          <section class="about-text">
-            <h2 class="visually-hidden"> Дизайнер макета </h2>
-            <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
-          </section>
-        </section>
-      </div>
-    </footer>
-  </body>
-</html>
+              <!--footer-social-->
+            <section class="footer-social">
+              <h2 class="visually-hidden">Наши аккаунты в социальных сетях</h2>
+              <ul class="footer-social-list reset-list">
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://www.facebook.com/htmlacademy">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20" cy="20" r="20"/>
+                    </svg>
+                    <svg class="footer-social-networks-icon" aria-hidden="true" focusable="false" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.5 3H9V0H5.6C2.8 0 2 1.7 2 4.2V6H0v3h2v9h3V9h3.3l.6-3H5V4.5C5 3.7 5.3 3 6.5 3Z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://www.instagram.com/htmlacademy">
+                    <span class="visually-hidden">Instagram</span>
+                    <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20" cy="20" r="20"/>
+                    </svg>
+                    <svg class="footer-social-networks-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                      <path d="M14.7 1.3c-.9-.9-2-1.3-3.4-1.3H4.7C1.9 0 0 1.9 0 4.7v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4V4.7c0-1.4-.4-2.6-1.3-3.4ZM8 12.1c-2.2 0-4.1-1.8-4.1-4.1S5.8 3.9 8 3.9c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://www.twitter.com/htmlacademy">
+                    <span class="visually-hidden">Twitter</span>
+                    <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20" cy="20" r="20"/>
+                    </svg>
+                    <svg class="footer-social-networks-icon" aria-hidden="true" focusable="false"  width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#a)">
+                        <path d="M9.7.16c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4c-.3 0-3.7-.4-4.3-1.8 2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2-1.1-.8-2.3-1.5-2.2-3.5.3.3.9.5 1.2.4C1 5.26-.2 2.36.8.86c1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <section class="about-text">
+                <h2 class="visually-hidden">Дизайн макета</h2>
+                <a class="about-text-link" href="https://htmlacademy.ru/" >.html academy
+                  <svg class="about-text-icon" aria-hidden="true" focusable="false" width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12.8999V15.4999H2.5V12.8999H0Z"/>
+                    <path d="M11.6 4.5C10 4.5 8.80002 5.2 8.00002 6.2H7.90002V0H5.90002V15.5H7.90002V10.2C7.90002 8.1 9.20002 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z"/>
+                    <path d="M26.6 4.8001H21.8V1.1001H19.8V4.9001H17.9V6.9001H19.8V12.9001C19.8 14.6001 20.8 15.6001 22.5 15.6001H26.6V13.6001H22.9C22.2 13.6001 21.8 13.2001 21.8 12.5001V6.8001H26.6V4.8001Z"/>
+                    <path d="M41.1 4.6001C39.5 4.6001 38.2 5.4001 37.6 6.7001H37.5C36.9 5.5001 35.7 4.6001 34.1 4.6001C32.7 4.6001 31.6 5.4001 31 6.4001H30.9V4.8001H29V15.4001H31V10.0001C31 8.0001 32 6.5001 33.6 6.5001C35.1 6.5001 36 7.5001 36 9.1001V15.4001H38V9.8001C38 7.4001 39.4 6.5001 40.6 6.5001C42.1 6.5001 43 7.5001 43 9.1001V15.4001H45V8.9001C45.1 6.4001 43.6 4.6001 41.1 4.6001Z"/>
+                    <path d="M47.8 12.7C47.8 14.4 48.8 15.4 50.6 15.4H52.6V13.4H50.9001C50.2001 13.4 49.8 13 49.8 12.3V0H47.8V12.7Z"/>
+                    <path d="M28.9 19.6999C28 18.5999 26.7 17.8999 25 17.8999C21.9 17.8999 19.6 20.1999 19.6 23.4999C19.6 26.7999 21.9 29.0999 25 29.0999C26.8 29.0999 28 28.2999 28.8 27.1999H28.9V28.7999H30.9V18.1999H28.9V19.6999ZM25.3 27.0999C23.1 27.0999 21.7 25.4999 21.7 23.4999C21.7 21.4999 23.1 19.8999 25.3 19.8999C27.5 19.8999 28.9 21.4999 28.9 23.4999C28.9 25.3999 27.5 27.0999 25.3 27.0999Z"/>
+                    <path d="M44.2 21.9999C43.7 19.5999 41.5999 17.8999 38.7999 17.8999C35.3999 17.8999 33.2 20.3999 33.2 23.4999C33.2 26.5999 35.3999 29.0999 38.7999 29.0999C41.5999 29.0999 43.7 27.2999 44.2 24.8999H42.0999C41.6999 26.1999 40.3999 27.1999 38.7999 27.1999C36.5999 27.1999 35.2 25.5999 35.2 23.5999C35.2 21.5999 36.5999 19.9999 38.7999 19.9999C40.3999 19.9999 41.5999 20.9999 42.0999 22.1999H44.2V21.9999Z"/>
+                    <path d="M55.1 19.6999C54.2 18.5999 52.9001 17.8999 51.2001 17.8999C48.1001 17.8999 45.8 20.1999 45.8 23.4999C45.8 26.7999 48.1001 29.0999 51.2001 29.0999C53.0001 29.0999 54.2 28.2999 55 27.1999H55.1V28.7999H57.1V18.1999H55.1V19.6999ZM51.5 27.0999C49.3 27.0999 47.9001 25.4999 47.9001 23.4999C47.9001 21.4999 49.3 19.8999 51.5 19.8999C53.7 19.8999 55.1 21.4999 55.1 23.4999C55.1 25.3999 53.6 27.0999 51.5 27.0999Z"/>
+                    <path d="M68.7 19.7999C67.8 18.6999 66.5 17.8999 64.8 17.8999C61.7 17.8999 59.4 20.1999 59.4 23.4999C59.4 26.7999 61.6 29.0999 64.8 29.0999C66.5 29.0999 67.8 28.2999 68.6 27.2999H68.7V28.7999H70.7V13.3999H68.7V19.7999ZM65.1 27.0999C62.9 27.0999 61.5 25.4999 61.5 23.4999C61.5 21.4999 62.9 19.8999 65.1 19.8999C67.3 19.8999 68.7 21.4999 68.7 23.4999C68.6 25.4999 67.2 27.0999 65.1 27.0999Z"/>
+                    <path d="M78.3 17.8999C75 17.8999 72.8 20.3999 72.8 23.4999C72.8 26.4999 74.9 29.0999 78.3 29.0999C80.8 29.0999 82.8 27.7999 83.5 25.4999H81.4C80.9 26.4999 79.8 27.0999 78.4 27.0999C76.5 27.0999 75.1 25.7999 75 24.1999H83.8C84 20.5999 81.8 17.8999 78.3 17.8999ZM78.3 19.7999C80 19.7999 81.3 20.7999 81.6 22.3999H75.1C75.4 20.8999 76.6 19.7999 78.3 19.7999Z"/>
+                    <path d="M98.2 17.8999C96.6 17.8999 95.3 18.6999 94.6 19.8999H94.5C93.9 18.6999 92.7 17.8999 91.1 17.8999C89.7 17.8999 88.6 18.5999 88 19.6999V18.1999H86.1V28.7999H88.1V23.3999C88.1 21.3999 89.1 19.9999 90.7 19.8999C92.2 19.8999 93.1 20.8999 93.1 22.4999V28.7999H95.1V23.1999C95.1 20.7999 96.5 19.8999 97.7 19.8999C99.2 19.8999 100.1 20.8999 100.1 22.4999V28.7999H102.1V22.2999C102.2 19.6999 100.7 17.8999 98.2 17.8999Z"/>
+                    <path d="M109.4 27.0001L105.8 18.1001H103.6L108.4 29.7001C108.1 30.6001 107.7 30.9001 106.7 30.9001H104.2V32.9001H106.7C108.5 32.9001 109.5 32.1001 110.2 30.3001L114.9 18.1001H112.8L109.4 27.0001Z"/>
+                  </svg>
+                </a>
+              </section>
+            </section>
+          </div>
+        </footer>
+      </body>
+    </html>

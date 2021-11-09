@@ -15,7 +15,8 @@
       <nav class="navigation">
         <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
-          <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <input class="search-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <button class="search-button" type="button">Найти</button>
         </form>
         <ul class="navigation-user-list reset-list">
           <li class="navigation-user-item navigation-login">
@@ -29,15 +30,78 @@
               <span class="visually-hidden">Количество товаров в корзине</span>
               <span class="cart-amount">2</span>
             </a>
+            <div class="popover">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Товары в корзине</h2>
+                <ul class="cart-items-list reset-list">
+                  <li class="cart-item">
+                    <a class="cart-image-link" href="#">
+                      <img class="cart-image" src="images/catalog/amateur-selfie-stick.png" alt="Любительская селфи-палка">
+                    </a>
+                    <p class="cart-item-title">Любительская селфи-палка</p>
+                    <button class="delete-item-button">
+                      <span class="visually-hidden">Удалить товар из корзины </span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a class="cart-image-link" href="#">
+                      <img class="cart-image" src="images/catalog/professional-selfie-stick.png" alt="Профессиональнгая селфи-палка">
+                    </a>
+                    <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    <button class="delete-item-button">
+                      <span class="visually-hidden">Удалить товар из корзины </span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="cart-price">
+                  <span class="cart-goods-amount">Товаров: 2</span>
+                  <span class="cart-goods-rate">Сумма: 2000&nbsp;₽</span>
+                </div>
+                <button class="cart-open-button" type="button">Открыть корзину</button>
+              </div>
+            </div>
           </li>
         </ul>
         <ul class="navigation-services-list reset-list">
           <li class="navigation-item navigation-catalog">
             <a class="navigation-catalog-link" href="#">Каталог товаров
             </a>
-            <svg class="catalog-round" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle opacity="0.2" cx="25" cy="25" r="24" fill="#FFE17F" stroke="black" stroke-width="2"/>
-              </svg>
+            <svg  class="catalog-round-icon" aria-hidden="true" focusable="false" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="24" fill="#FFE17F" />
+            </svg>
+            <svg class="subcatalog-icon plus-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/>
+            </svg>
+            <svg class="subcatalog-icon minus-icon" aria-hidden="true" focusable="false" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0H0V2H16V0Z"/>
+            </svg>
+            <span class="visually-hidden">Показать категории товаров</span>
+            <div class="navigation-subcatalog">
+              <ul class="subcatalog-list reset-list">
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="subcatalog-list reset-list">
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="subcatalog-list reset-list">
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item navigation-delivery">
             <a class="navigation-services-link" href="#">Доставка</a>
@@ -217,11 +281,11 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="advantages-gradient">
           <div class="page-container advantages-grid-container">
-            <input class="visually-hidden" type="radio" name="tab-btn" id="tab-btn-1" value="delivery" checked>
+            <input class="visually-hidden advantages-input" type="radio" name="tab-btn" id="tab-btn-1" value="delivery" checked>
             <label class="advantages-label btn-dark" for="tab-btn-1" tabindex="0">Доставка</label>
-            <input class="visually-hidden" type="radio" name="tab-btn" id="tab-btn-2" value="warranty">
+            <input class="visually-hidden advantages-input" type="radio" name="tab-btn" id="tab-btn-2" value="warranty">
             <label class="advantages-label btn-dark" for="tab-btn-2" tabindex="0">Гарантия</label>
-            <input  class="visually-hidden" type="radio" name="tab-btn" id="tab-btn-3" value="credit">
+            <input  class="visually-hidden advantages-input" type="radio" name="tab-btn" id="tab-btn-3" value="credit">
             <label class="advantages-label btn-dark" for="tab-btn-3" tabindex="0">Кредит</label>
             <section class="advantages-details advantages-details-delivery" id="content-1">
               <h3 class="advantages-subtitle">Доставка</h3>
@@ -303,7 +367,7 @@
             <div class="subscribe-flex-container-bottom">
               <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
                 <label  class="visually-hidden" for="email">Введите свой email</label>
-                <input type="text" name="email" id="email" placeholder="Ваш e-mail">
+                <input class="subscribe-field" type="text" name="email" id="email" placeholder="Ваш e-mail">
                 <button class="btn btn-subscribe" type="submit">Подписаться</button>
               </form>
               <span class="subscribe-notice">Это бесплатно</span>
@@ -411,5 +475,53 @@
         </section>
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden"> Уменьшить количество товаров</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="modal-form" action="https//echo.htmlacademy.ru" method="post">
+            <div class="modal-form-container">
+              <div class="modal-form-block modal-form-name ">
+                <label class="modal-form-label" for="your-name">Ваше имя:</label>
+                <input class="modal-form-field" type="text" name="your-name" id="your-name" placeholder="Имя Фамилия">
+                <span class="modal-note modal-name-note">Пожалуйста, представьтесь</span>
+                <span class="active-error-note">Подпись под полем ввода</span>
+              </div>
+              <div class="modal-form-block modal-form-email">
+                <label class="modal-form-label" for="your-email">Ваш e-mail:</label>
+                <input class="modal-form-field modal-form-field-active" type="text"  name="your-email" id="your-email" value="krasotka92@mail.ru" required>
+                <span class="modal-note modal-email-note">Забавный у вас адрес</span>
+                <span class="active-error-note">Подпись под полем ввода</span>
+              </div>
+            </div>
+            <div class="modal-form-container">
+              <div class="modal-form-block modal-form-delivery">
+                <label class="modal-form-label" for="delivery-order">Что нужно привезти:</label>
+                <input class="modal-form-field" type="text" name="delivery-order" id="delivery-order" placeholder="В свободной форме">
+              </div>
+              <div class="modal-form-block modal-form-number">
+                <label class="modal-form-label modal-tooltip-label" for="delivery-number">Количество:</label>
+                <div class="modal-tooltip">
+                  <p class="modal-tooltip-info">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.</p>
+                </div>
+                <div class="modal-number-container">
+                  <input class="modal-form-field modal-number-field" type="number"  name="delivery-amount" id="delivery-number" placeholder="1" min="1">
+                  <button class="modal-number-button modal-button-minus" type="button">
+                    <span class="visually-hidden"> Уменьшить количество товаров</span>
+                  </button>
+                  <button class="modal-number-button modal-button-plus" type="button">
+                    <span class="visually-hidden"> Увеличить количество товаров</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-modal" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

@@ -25,10 +25,10 @@
           <li class="navigation-user-item navigation-compare">
             <a class="navigation-user-link" href="#">Сравнить</a>
           </li>
-          <li class="navigation-user-item navigation-cart">
+          <li class="navigation-user-item navigation-cart" data-amount="2" >
             <a class="navigation-user-link" href="#">Корзина
               <span class="visually-hidden">Количество товаров в корзине</span>
-              <span class="cart-amount">2</span>
+              <!--<span class="cart-amount">2</span>-->
             </a>
             <div class="popover">
               <div class="popover-content">
@@ -63,18 +63,9 @@
           </li>
         </ul>
         <ul class="navigation-services-list reset-list">
-          <li class="navigation-item navigation-catalog">
+          <li class="navigation-services-item navigation-catalog">
             <a class="navigation-catalog-link" href="#">Каталог товаров
             </a>
-            <svg  class="catalog-round-icon" aria-hidden="true" focusable="false" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="25" r="24" fill="#FFE17F" />
-            </svg>
-            <svg class="subcatalog-icon plus-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/>
-            </svg>
-            <svg class="subcatalog-icon minus-icon" aria-hidden="true" focusable="false" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 0H0V2H16V0Z"/>
-            </svg>
             <span class="visually-hidden">Показать категории товаров</span>
             <div class="navigation-subcatalog">
               <ul class="subcatalog-list reset-list">
@@ -103,13 +94,13 @@
               </ul>
             </div>
           </li>
-          <li class="navigation-item navigation-delivery">
+          <li class="navigation-services-item navigation-delivery">
             <a class="navigation-services-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item navigation-warranty">
+          <li class="navigation-services-item navigation-warranty">
             <a class="navigation-services-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item navigation-contacts">
+          <li class="navigation-services-item navigation-contacts">
             <a class="navigation-services-link" href="#">Контакты</a>
           </li>
         </ul>
@@ -134,12 +125,16 @@
               <b>Порхает как бабочка, жалит как пчела! </b>
               <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="btn slider-btn" href="#">Подробнее</a>
-              <dl class="features features-quadrocopter">
-                <dt class="features-description">Дальность полета</dt>
-                <dd class="features-value"> 800 м</dd>
-                <dt class="features-description">Радиус поражения</dt>
-                <dd class="features-value"> 50 м</dd>
-              </dl>
+              <div class="features-container">
+                <dl class="features features-quadrocopter">
+                  <dt class="features-value">800 м</dt>
+                  <dd class="features-description"> Дальность полета</dd>
+                </dl>
+                <dl class="features features-quadrocopter">
+                  <dt class="features-value">50 м</dt>
+                  <dd class="features-description"> Радиус поражения</dd>
+                </dl>
+              </div>
             </div>
           </section>
 
@@ -150,11 +145,13 @@
             <div class="slide-content-container fitness-tracker-text-container">
               <b>Худеем<br>правильно!</b>
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="btn slider-btn" href="#" tabindex="-1">Подробнее</a>
-              <dl class="features features-fitness-tracker">
-                <dt class= "features-description">Без подзарядки</dt>
-                <dd class="features-value">48 часов</dd>
-              </dl>
+              <a class="btn slider-btn" href="#">Подробнее</a>
+              <div class="features-container">
+                <dl class="features features-fitness-tracker">
+                  <dt class="features-value">48 часов</dt>
+                  <dd class= "features-description">Без подзарядки</dd>
+                </dl>
+              </div>
             </div>
           </section>
 
@@ -166,14 +163,20 @@
               <b>Делай селфи,<br>как Бен Стиллер!</b>
               <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
               <a class="btn slider-btn" href="#">Подробнее</a>
-              <dl class="features features-selfie-stick">
-                <dt class="features-description">Длина палки</dt>
-                <dd class="features-value"> 8.5 м</dd>
-                <dt class="features-description">Вес палки</dt>
-                <dd class="features-value"> 5 кг </dd>
-                <dt class="features-description">Материал</dt>
-                <dd class="features-value"> Карбон </dd>
-              </dl>
+              <div class="features-container">
+                <dl class="features features-selfie-stick">
+                  <dt class="features-value"> 8.5 м</dt>
+                  <dd class="features-description">Длина палки</dd>
+                </dl>
+                <dl class="features features-selfie-stick">
+                  <dt class="features-value"> 5 кг </dt>
+                  <dd class="features-description">Вес палки</dd>
+                </dl>
+                <dl class="features features-selfie-stick">
+                  <dt class="features-value"> Карбон </dt>
+                  <dd class="features-description">Материал</dd>
+                </dl>
+              </div>
             </div>
           </section>
         </div>
@@ -492,7 +495,7 @@
               </div>
               <div class="modal-form-block modal-form-email">
                 <label class="modal-form-label" for="your-email">Ваш e-mail:</label>
-                <input class="modal-form-field modal-form-field-active" type="text"  name="your-email" id="your-email" value="krasotka92@mail.ru" required>
+                <input class="modal-form-field" type="text"  name="your-email" id="your-email" value="krasotka92@mail.ru" required>
                 <span class="modal-note modal-email-note">Забавный у вас адрес</span>
                 <span class="active-error-note">Подпись под полем ввода</span>
               </div>

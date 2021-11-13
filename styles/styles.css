@@ -2775,12 +2775,11 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 51px;
+  width: 42px;
 }
 
 .sorting-button {
   position: relative;
-  padding: 10px;
   width: 11px;
   height: 11px;
   background-color: transparent;
@@ -2790,7 +2789,7 @@ img {
 
 .sorting-icon {
   position: absolute;
-  top: 5px;
+  top: 1px;
   right: 0;
   fill: rgba(0, 0, 0, 0.2);
 }
